@@ -1,0 +1,14 @@
+.propimagen{
+    height: 200px;
+    margin-left: 50px;
+    width: 20%;
+}
+.centrador{
+    display:block;
+    margin:auto;
+}    
+.boxgeneral{
+    position: relative;
+    top: 450px;
+    background-color: rgba(0, 0, 0, .5);
+}

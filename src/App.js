@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Carousel from 'react-bootstrap/Carousel'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './page/home';
+import Contact from './page/contact';
+import Briefcase from './page/briefcase';
+import { Form } from 'react-bootstrap';
+import './App.css'
+
+
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className='App'>
+        <Router>
+          <button><Link to='/home'>Home</Link></button>
+          <button><Link to='/briefcase'>Portafolio</Link></button>
+          <button><Link to='/contact'>Contacto</Link></button>
+          <Switch>
+            <Route path='/home'>
+              <Home></Home>
+            </Route>
+            <Route path='/contact'>
+              <Contact></Contact>
+            </Route>
+            <Route path='/briefcase'>
+              <Briefcase></Briefcase>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    )
+  }
 }
 
 export default App;
