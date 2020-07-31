@@ -21,22 +21,25 @@ class App extends Component {
     return (
       <div className='App'>
         <Router>
-          <button><Link to='/home'>Home</Link></button>
-          <button><Link to='/briefcase'>Portafolio</Link></button>
-          <button><Link to='/contact'>Contacto</Link></button>
+          <div className='Stylebar'>
+          <button className='Stylebutton'><Link style={{color:'black'}} to='/home'>Home</Link></button>
+          <button className='Stylebutton'><Link style={{color:'black'}} to='/briefcase'>Portafolio</Link></button>
+          <button className='Stylebutton'><Link style={{color:'black'}} to='/contact'>Contacto</Link></button>
+          </div>
           <Switch>
-            <Route path='/home'>
-              <Home></Home>
-            </Route>
             <Route path='/contact'>
               <Contact></Contact>
             </Route>
             <Route path='/briefcase'>
               <Briefcase></Briefcase>
             </Route>
+            <Route path='/'>
+              <Home></Home>
+            </Route>
           </Switch>
         </Router>
       </div>
+      
     )
   }
 }

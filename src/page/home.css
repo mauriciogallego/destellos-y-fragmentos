@@ -3,12 +3,32 @@
     margin-left: 50px;
     width: 20%;
 }
+.positbox{
+    height: 75%;
+       
+}
 .centrador{
     display:block;
     margin:auto;
 }    
 .boxgeneral{
-    position: relative;
-    top: 450px;
-    background-color: rgba(0, 0, 0, .5);
+    
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.container-title{
+    
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-family: Allura;
+   
+}
+@font-face {
+    font-family: Allura;
+    src: url('../assets/font/allura.regular.ttf');
+    
+
 }

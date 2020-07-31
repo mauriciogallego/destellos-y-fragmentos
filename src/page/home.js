@@ -12,11 +12,12 @@ class Home extends Component {
     render() {
         return (
             <div className="positbox">
-           <div className="boxgeneral home alert alert-secondary">   
-           
-                <Carousel>
-                    <Carousel.Item>
-                        
+                <div className='container-title'>
+                    <h1 style={{fontSize:'100px'}}>Destellos y fragmentos</h1>
+                </div>
+                <div className="boxgeneral alert alert-secondary">
+                    <Carousel>
+                        <Carousel.Item>
                             <Image
                                 className="propimagen d-inline-block "
                                 src={foto1}
@@ -40,44 +41,40 @@ class Home extends Component {
                                 src={foto4}
                                 alt="cuatro"
                             />
-                        
-
-                        <Carousel.Caption>
-
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="propimagen d-inline-block w-20"
-                            src={foto2}
-                            alt="Third slide"
-                        />
-
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className=" propimagen d-block w-20"
-                            src={foto3}
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className=" propimagen d-block w-20"
-                            src={foto4}
-                            alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+                            <Carousel.Caption>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="propimagen d-inline-block w-20"
+                                src={foto2}
+                                alt="Third slide"
+                            />
+                            <Carousel.Caption>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className=" propimagen d-block w-20"
+                                src={foto3}
+                                alt="Third slide"
+                            />
+                            <Carousel.Caption>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className=" propimagen d-block w-20"
+                                src={foto4}
+                                alt="Third slide"
+                            />
+                            <Carousel.Caption>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
+                </div>
             </div>
-            </div>
-            
+
         )
     }
 
