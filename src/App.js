@@ -11,9 +11,8 @@ import Home from './page/home';
 import Contact from './page/contact';
 import Briefcase from './page/briefcase';
 import { Form } from 'react-bootstrap';
+
 import './App.css'
-
-
 
 
 class App extends Component {

@@ -5,6 +5,9 @@ import foto1 from "../assets/imagen/foto1.png";
 import foto2 from "../assets/imagen/foto2.png";
 import foto3 from "../assets/imagen/foto3.png";
 import foto4 from "../assets/imagen/foto4.png";
+import foto5 from "../assets/imagen/foto5.png";
+import foto6 from "../assets/imagen/foto6.png";
+import foto7 from "../assets/imagen/foto7.png";
 
 import Image from 'react-bootstrap/Image'
 
@@ -45,28 +48,22 @@ class Home extends Component {
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img
-                                className="propimagen d-inline-block w-20"
-                                src={foto2}
-                                alt="Third slide"
+                        <Image
+                                className="propimagen d-inline-block "
+                                src={foto5}
+                                alt="First slide"
                             />
-                            <Carousel.Caption>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className=" propimagen d-block w-20"
-                                src={foto3}
-                                alt="Third slide"
+                            <Image
+
+                                className="propimagen d-inline-block "
+                                src={foto6}
+                                alt="dos"
                             />
-                            <Carousel.Caption>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className=" propimagen d-block w-20"
-                                src={foto4}
-                                alt="Third slide"
+                            <Image
+
+                                className="propimagen d-inline-block "
+                                src={foto7}
+                                alt="tres"
                             />
                             <Carousel.Caption>
                             </Carousel.Caption>
