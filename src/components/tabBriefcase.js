@@ -8,7 +8,7 @@ import foto4 from "../assets/imagen/foto4.png";
 import foto5 from "../assets/imagen/foto5.png";
 import foto6 from "../assets/imagen/foto6.png";
 import foto7 from "../assets/imagen/foto7.png";
-import tabBriefcaseItem from '../components/tabBriefcase.item';
+
 
 
 const imgs = [foto1, foto2, foto3, foto4, foto5, foto6, foto7]
@@ -21,8 +21,8 @@ class TabBriefcase extends Component {
                     <Tab>Title 1</Tab>
                     <Tab>Title 2</Tab>
                 </TabList>
-            <tabBriefcaseItem imgs={imgs}></tabBriefcaseItem>
-            <tabBriefcaseItem imgs={imgs}></tabBriefcaseItem>
+            
+        
             </Tabs>
         )
     }
