@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './briefcase.css';
+
 import TabBriefcase from '../components/tabBriefcase';
 
 import foto1 from "../assets/imagen/foto1.png";
@@ -15,7 +16,7 @@ const imgs = [foto1, foto2, foto3, foto4, foto5, foto6, foto7]
 const fetch = [
     {
         title: "portafolio 1",
-        img : imgs
+        img: imgs
     },
     {
         title: "portafolio 2",
@@ -28,10 +29,21 @@ const fetch = [
 ]
 
 class Briefcase extends Component {
+
+    state = {
+        portafolio: []
+    }
+
+    componentDidMount() {
+        //despues de crear el componente
+        this.setState({ portafolio: fetch })
+
+
+    }
     render() {
         return (
             <div>
-               <TabBriefcase></TabBriefcase>
+                <TabBriefcase PropsFotos={this.state.portafolio}></TabBriefcase>
             </div>
         )
     }
