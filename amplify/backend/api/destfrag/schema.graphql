@@ -1,0 +1,15 @@
+type Gallery @model {
+  sections: [Briefcase]
+} 
+
+type Briefcase {
+  id: ID!
+  title: String!
+  colletion: [ Image! ]!
+}
+
+type Image{
+  id: ID!
+  name: String!
+  source: String!
+}
