@@ -21,9 +21,9 @@ class App extends Component {
       <div className='App'>
         <Router>
           <div className='Stylebar'>
-          <button className='Stylebutton'><Link style={{color:'black'}} to='/home'>Home</Link></button>
-          <button className='Stylebutton'><Link style={{color:'black'}} to='/briefcase'>Portafolio</Link></button>
-          <button className='Stylebutton'><Link style={{color:'black'}} to='/contact'>Contacto</Link></button>
+          <Link style={{color:'black',textDecoration:'none'}} to='/home'> <button className='Stylebutton'>Home</button></Link>
+          <Link style={{color:'black',textDecoration:'none'}} to='/briefcase'><button className='Stylebutton'>Portafolio</button></Link>
+          <Link style={{color:'black',textDecoration:'none'}} to='/contact'><button className='Stylebutton'>Contacto</button></Link>
           </div>
           <Switch>
             <Route path='/contact'>

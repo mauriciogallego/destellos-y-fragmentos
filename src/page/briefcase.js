@@ -23,7 +23,7 @@ const fetch = [
         img: imgs
     },
     {
-        title: "portafolio 2",
+        title: "portafolio 3",
         img: imgs
     }
 ]
