@@ -1,5 +1,5 @@
 type Gallery @model {
-  sections: [Briefcase]
+  sections: Briefcase
 } 
 
 type Briefcase {
