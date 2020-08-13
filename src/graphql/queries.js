@@ -10,7 +10,6 @@ export const getGallery = /* GraphQL */ `
         colletion {
           id
           name
-          source
         }
       }
       createdAt

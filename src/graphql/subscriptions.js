@@ -10,7 +10,6 @@ export const onCreateGallery = /* GraphQL */ `
         colletion {
           id
           name
-          source
         }
       }
       createdAt
@@ -27,7 +26,6 @@ export const onUpdateGallery = /* GraphQL */ `
         colletion {
           id
           name
-          source
         }
       }
       createdAt
@@ -44,7 +42,6 @@ export const onDeleteGallery = /* GraphQL */ `
         colletion {
           id
           name
-          source
         }
       }
       createdAt

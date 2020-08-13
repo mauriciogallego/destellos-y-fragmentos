@@ -11,5 +11,4 @@ type Briefcase {
 type Image{
   id: ID!
   name: String!
-  source: String!
 }
