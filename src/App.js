@@ -16,13 +16,20 @@ class App extends Component {
       <div className="App">
         <Router>
           <div className="Stylebar">
-            <Link style={{ color: "black" }} to="/home">
+            <Link style={{ color: "black", textDecoration: "none" }} to="/home">
+              {" "}
               <button className="Stylebutton">Home</button>
             </Link>
-            <Link style={{ color: "black" }} to="/briefcase">
+            <Link
+              style={{ color: "black", textDecoration: "none" }}
+              to="/briefcase"
+            >
               <button className="Stylebutton">Portafolio</button>
             </Link>
-            <Link style={{ color: "black" }} to="/contact">
+            <Link
+              style={{ color: "black", textDecoration: "none" }}
+              to="/contact"
+            >
               <button className="Stylebutton">Contacto</button>
             </Link>
           </div>

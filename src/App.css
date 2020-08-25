@@ -1,12 +1,12 @@
 .App {
   text-align: center;
   background: url('./assets/imagen/fondo.jpg');
-  height: 1000px;
+  
 
 }
 
 .Stylebar{
-  background-color: rgba(0, 0, 0, .5);
+ background-color: rgba(0, 0, 0, .5);
  height: 70px;
  color: white;
 
@@ -16,10 +16,11 @@
   height: 70px;
   border-style: none;
   background-color: rgba(0, 0, 0, .0);
-  color: 'white';
-  
-  
 }
-  
+
+.Stylelink{
+  text-decoration: none;
+  color: black;
+}
 
 

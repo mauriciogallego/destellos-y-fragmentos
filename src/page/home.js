@@ -15,7 +15,7 @@ class Home extends Component {
     render() {
         return (
             <div className="positbox">
-                <div className='container-title'>
+                <div className='container-title' style={{height:window.innerHeight-70}}>
                     <h1 style={{fontSize:'100px'}}>Destellos y fragmentos</h1>
                 </div>
                 <div className="boxgeneral alert alert-secondary">
