@@ -1,34 +1,86 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getGallery = /* GraphQL */ `
-  query GetGallery($id: ID!) {
-    getGallery(id: $id) {
-      sections {
-        id
-        title
-        colletion {
+export const getBriefcase = /* GraphQL */ `
+  query GetBriefcase($id: ID!) {
+    getBriefcase(id: $id) {
+      id
+      title
+      collection {
+        items {
           id
+          briefcaseID
           name
+          createdAt
+          updatedAt
         }
+        nextToken
       }
       createdAt
       updatedAt
     }
   }
 `;
-export const listGallerys = /* GraphQL */ `
-  query ListGallerys(
-    $filter: ModelGalleryFilterInput
+export const listBriefcases = /* GraphQL */ `
+  query ListBriefcases(
+    $filter: ModelBriefcaseFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listGallerys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listBriefcases(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
-        sections {
+        id
+        title
+        collection {
+          items {
+            id
+            name
+          }
+        }
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getImage = /* GraphQL */ `
+  query GetImage($id: ID!) {
+    getImage(id: $id) {
+      id
+      briefcaseID
+      briefcase {
+        id
+        title
+        collection {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      name
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listImages = /* GraphQL */ `
+  query ListImages(
+    $filter: ModelImageFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listImages(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        briefcaseID
+        briefcase {
           id
           title
+          createdAt
+          updatedAt
         }
+        name
         createdAt
         updatedAt
       }

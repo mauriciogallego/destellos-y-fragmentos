@@ -1,0 +1,16 @@
+.containerImage {
+  width: 15%;
+  margin: 1%;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+
+}
+
+.listImages {
+  width: 100%;
+  display: flex;
+}

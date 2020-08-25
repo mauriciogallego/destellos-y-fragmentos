@@ -1,14 +1,12 @@
-type Gallery @model {
-  sections: Briefcase
-} 
-
-type Briefcase {
+type Briefcase @model {
   id: ID!
   title: String!
-  colletion: [ Image! ]!
+  collection: [Image] @connection(keyName: "byCollection", fields: ["id"])
 }
 
-type Image{
+type Image @model @key(name: "byCollection", fields: ["briefcaseID", "name"]) {
   id: ID!
+  briefcaseID: ID!
+  briefcase: Briefcase @connection(fields: ["briefcaseID"])
   name: String!
 }

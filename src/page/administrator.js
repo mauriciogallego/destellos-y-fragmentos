@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Auth from "@aws-amplify/auth";
 import Login from "../components/login";
-import { API, graphqlOperation } from "aws-amplify";
-import { listGallerys } from "../graphql/queries";
 import CreateBriefcase from "../components/createBriefcase";
 import UpdateBriefcase from "../components/updateBriefcase";
+import "./administrator.css";
 
 class Administrator extends Component {
   constructor(props) {
@@ -13,17 +12,17 @@ class Administrator extends Component {
     this.state = {
       loggedIn: false,
       err: false,
-      section: true,
+      section: null,
     };
   }
 
   async componentDidMount() {
-    let existToken = localStorage.getItem('CognitoIdentityServiceProvider.k38fqmdpqt4jasnuh8c8n2o3h.mauricio.idToken');
-    if (existToken){
-      this.setState({loggedIn:true})
+    let existToken = localStorage.getItem(
+      "CognitoIdentityServiceProvider.k38fqmdpqt4jasnuh8c8n2o3h.mauricio.idToken"
+    );
+    if (existToken) {
+      this.setState({ loggedIn: true });
     }
-    const data = await API.graphql(graphqlOperation(listGallerys));
-    console.log('list gallery',data.data.listGallerys.items)
   }
 
   auth(state) {
@@ -42,9 +41,23 @@ class Administrator extends Component {
     if (this.state.loggedIn) {
       return (
         <div>
-          <div>
-            <p>crear nuevo portafolio</p>
-            <p>agregar fotos a un portafolio</p>
+          <div className="containersBtn">
+            <div className="containerBtn">
+              <button
+                className="btn"
+                onClick={() => this.setState({ section: true })}
+              >
+                crear nuevo portafolio
+              </button>
+            </div>
+            <div className="containerBtn">
+              <button
+                className="btn"
+                onClick={() => this.setState({ section: false })}
+              >
+                agregar fotos a un portafolio
+              </button>
+            </div>
           </div>
           <div>
             {this.state.section ? <CreateBriefcase /> : <UpdateBriefcase />}
