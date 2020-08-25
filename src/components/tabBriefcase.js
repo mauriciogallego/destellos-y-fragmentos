@@ -8,7 +8,7 @@ class TabBriefcase extends Component {
     render() {
         return (
             <Tabs >
-                <TabList default>
+                <TabList>
                     {this.props.PropsFotos.map((i, index) => {
                         return <Tab >{i.title}</Tab>
                     })}
