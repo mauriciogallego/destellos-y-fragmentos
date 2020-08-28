@@ -1,6 +1,29 @@
 .PropImgTab{
-    width: 200px;
-    height: 200px;
-    margin: 2px;
+    width: 250px;
+    height: 250px;
+    margin: 8px;
+    border-radius: 10px;
+    float: left; 
     
+}
+.PropsTabs{
+    
+    display: inline;
+    margin: 20px;
+    float: left; 
+    background-color: red;
+    width: 200px;
+    
+}
+.StyleTabsFather{
+  overflow: hidden;
+}
+
+.TabPanelStyle{
+    float: left;
+
+}
+
+.TabListStyle{
+    background-color: blue;
 }
