@@ -4,11 +4,13 @@ import Login from "../components/login";
 import CreateBriefcase from "../components/createBriefcase";
 import UpdateBriefcase from "../components/updateBriefcase";
 import "./administrator.css";
+import Errors from "components/errors";
 
 class Administrator extends Component {
   constructor(props) {
     super(props);
     this.auth = this.auth.bind(this);
+    this.errorFunc = this.errorFunc.bind(this);
     this.state = {
       loggedIn: false,
       err: false,
@@ -16,6 +18,11 @@ class Administrator extends Component {
     };
   }
 
+  errorFunc() {
+    if (this.state.err) {
+      this.setState({ err: false });
+    }
+  }
   async componentDidMount() {
     let existToken = localStorage.getItem(
       "CognitoIdentityServiceProvider.k38fqmdpqt4jasnuh8c8n2o3h.mauricio.idToken"
@@ -65,7 +72,12 @@ class Administrator extends Component {
         </div>
       );
     } else {
-      return <Login auth={this.auth} />;
+      return (
+        <div>
+          {this.state.err ? <Errors /> : null}
+          <Login errorFunc={this.errorFunc} auth={this.auth} />
+        </div>
+      );
     }
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { API, graphqlOperation, Storage } from "aws-amplify";
-import { createImage, createBriefcase } from "../graphql/mutations";
+import { createBriefcase } from "../graphql/mutations";
+import { uploadStorage } from "../api/index";
 import ReactLoading from "react-loading";
 import "./createBriefcase.css";
 
@@ -10,7 +11,7 @@ export default function CreateBriefcase(props) {
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
-  const [loaded, setLoaded] = useState("")
+  const [loaded, setLoaded] = useState("");
 
   async function createBriefcasef(e) {
     setLoading(true);
@@ -87,15 +88,4 @@ export default function CreateBriefcase(props) {
       </form>
     </div>
   );
-}
-
-async function uploadStorage(briefcaseID, i) {
-  await Storage.put(i.name, i);
-  console.log("uploadStorage");
-  const data = await API.graphql(
-    graphqlOperation(createImage, {
-      input: { name: i.name, briefcaseID: briefcaseID },
-    })
-  );
-  return data;
 }

@@ -1,0 +1,9 @@
+.conteiner{
+position: absolute;
+width: 100%;
+background: rgba(0, 0, 0, 0.503);
+}
+
+.conteiner img{
+  width: 40%;
+}

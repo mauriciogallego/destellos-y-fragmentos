@@ -1,1 +1,9 @@
-{}
+{
+    "groupPermissionMap": {
+        "destellos123": [
+            "create/update",
+            "read",
+            "delete"
+        ]
+    }
+}

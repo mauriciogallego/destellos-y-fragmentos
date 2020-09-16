@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Storage } from "aws-amplify";
 import Image from "react-bootstrap/Image";
 import "./briefcaseObject.css";
-
+import { uploadStorage } from "../api/index";
 export default function BriefcaseObject(props) {
   const [files, setFiles] = useState([]);
   const [img, setImg] = useState([]);
@@ -21,9 +21,23 @@ export default function BriefcaseObject(props) {
 
     setImg(imgs);
   }
+
+  async function updateGallery() {
+    files.map((i) => {
+      uploadStorage(props.object.id, i);
+    });
+    setFiles([]);
+  }
   return (
     <div>
-      <h2>{props.object.title}</h2>
+      <div className="sectionBtn">
+        <h2>{props.object.title}</h2>
+        {files.length !== 0 ? (
+          <button onClick={updateGallery} className="btn">
+            Guardar
+          </button>
+        ) : null}
+      </div>
       <div className="listImages">
         {img.map((i, index) => {
           return (

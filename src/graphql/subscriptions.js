@@ -29,10 +29,6 @@ export const onUpdateBriefcase = /* GraphQL */ `
       collection {
         items {
           id
-          briefcaseID
-          name
-          createdAt
-          updatedAt
         }
         nextToken
       }

@@ -14,3 +14,10 @@
   width: 100%;
   display: flex;
 }
+
+.sectionBtn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.3rem
+}

@@ -1,26 +1,25 @@
 .App {
-  text-align: center;
-  background: url('./assets/imagen/fondo.jpg');
-  
-
+  position: relative;
+  background: url("./assets/imagen/fondo.jpg");
 }
 
-.Stylebar{
- background-color: rgba(0, 0, 0, .5);
- height: 70px;
- color: white;
-
+.Stylebar {
+  background: rgba(9, 9, 9, 0.68);
+  height: 70px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-.Stylebutton{
+.Stylebutton {
   width: 200px;
   height: 70px;
   border-style: none;
-  background-color: rgba(0, 0, 0, .0);
+  font-size: 1.4rem;
+  background-color: transparent;
+  color: white;
 }
 
-.Stylelink{
+.Stylelink {
   text-decoration: none;
-  color: black;
 }
-
-

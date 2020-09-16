@@ -1,23 +1,20 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Carousel from "react-bootstrap/Carousel";
-
 import Home from "./page/home";
 import Contact from "./page/contact";
 import Briefcase from "./page/briefcase";
-import { Form } from "react-bootstrap";
-
+import Footer from "components/footer/index";
 import "./App.css";
 import Administrator from "./page/administrator";
 
 class App extends Component {
   render() {
+    const minHeight = window.innerHeight - 70;
     return (
       <div className="App">
         <Router>
           <div className="Stylebar">
             <Link style={{ color: "black", textDecoration: "none" }} to="/home">
-              {" "}
               <button className="Stylebutton">Home</button>
             </Link>
             <Link
@@ -33,20 +30,23 @@ class App extends Component {
               <button className="Stylebutton">Contacto</button>
             </Link>
           </div>
-          <Switch>
-            <Route path="/administrator">
-              <Administrator />
-            </Route>
-            <Route path="/contact">
-              <Contact></Contact>
-            </Route>
-            <Route path="/briefcase">
-              <Briefcase></Briefcase>
-            </Route>
-            <Route path="/">
-              <Home></Home>
-            </Route>
-          </Switch>
+          <div style={{ minHeight: minHeight }} className="containerScreen">
+            <Switch>
+              <Route path="/administrator">
+                <Administrator />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/briefcase">
+                <Briefcase />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+          <Footer />
         </Router>
       </div>
     );

@@ -1,0 +1,14 @@
+.footer {
+  background: rgba(9,9,9,0.78);
+  padding-left: 3.5%;
+  margin: 0;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.footerText {
+  font-family: "Roboto-Thin";
+  color: white;
+  font-weight: 300;
+}

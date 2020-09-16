@@ -13,6 +13,7 @@ export default class Login extends Component {
 
   change(event, key) {
     this.setState({ [key]: event.target.value });
+    this.props.errorFunc()
 
   }
   render() {

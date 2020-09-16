@@ -1,0 +1,9 @@
+.containerError{
+  background: rgb(231, 117, 117);
+}
+
+.containerError p{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 1%;
+}

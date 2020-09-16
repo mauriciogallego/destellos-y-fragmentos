@@ -1,35 +1,31 @@
-.propimagen{
-    height: 200px;
-    margin-left: 50px;
-    width: 20%;
+.propimagen {
+  height: 200px;
+  margin-left: 50px;
+  width: 20%;
 }
-.positbox{
-    height: 75%;
-    
-       
+.positbox {
+  height: 75%;
 }
-.centrador{
-    display:block;
-   
-}    
-.boxgeneral{
-    
-    background-color: rgba(0, 0, 0, .2);
+.centrador {
+  display: block;
+}
+.boxgeneral {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.container-title{
-    
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    font-family: Allura;
-   
+.title{
+  font-size: 8rem;
+}
+.container-title {
+  height: 90%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  font-family: Allura;
 }
 @font-face {
-    font-family: Allura;
-    src: url('../assets/font/allura.regular.ttf');
-    
-
+  font-family: Allura;
+  src: url("../assets/font/allura.regular.ttf");
 }

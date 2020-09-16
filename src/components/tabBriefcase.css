@@ -1,6 +1,17 @@
-.PropImgTab{
-    width: 200px;
-    height: 200px;
-    margin: 2px;
-    
+.tabItems {
+  background: rgba(255, 129, 129, 0.782);
+}
+
+.img {
+  width: 180px;
+  height: 150px;
+  margin: 1%;
+  border-radius: 3px;
+  cursor: pointer;
+
+}
+
+.containerImg {
+  width: 100%;
+  justify-self: right;
 }
