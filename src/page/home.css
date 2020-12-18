@@ -6,11 +6,22 @@
 .positbox {
   height: 75%;
 }
+<<<<<<< HEAD
 .centrador {
   display: block;
 }
 .boxgeneral {
   background-color: rgba(0, 0, 0, 0.2);
+=======
+.centrador{
+    display:block;
+   
+}    
+.boxgeneral{
+    
+    background-color: rgba(0, 0, 0, .2);
+    margin: 0mm;
+>>>>>>> 80c8f87d72241c5d3fc169d4aa88b39816cb8bca
 }
 
 .title{

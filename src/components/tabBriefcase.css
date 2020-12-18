@@ -15,3 +15,15 @@
   width: 100%;
   justify-self: right;
 }
+.StyleTabsFather{
+  overflow: hidden;
+}
+
+.TabPanelStyle{
+    float: left;
+
+}
+
+.TabListStyle{
+    background-color: blue;
+}
